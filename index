@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miguel Jose Diaz | Personal Brand</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary-color: #5DADE2;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #3498db;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+header.show { opacity:1; transform: translateY(0); }
+
+header h1 { font-size: 2.8em; margin-bottom: 15px; }
+
+header p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+section.show { opacity:1; transform: translateY(0); }
+
+h2 { color: var(--primary-color); margin-bottom: 20px; text-align: center; }
+
+.about p { text-align:center; max-width:800px; margin:0 auto; }
+
+.skills, .hobbies {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill, .hobby {
+    background-color:#fff;
+    border:2px solid var(--primary-color);
+    padding:12px 20px;
+    border-radius:30px;
+    font-weight:bold;
+    transition: all 0.3s ease;
+}
+
+.skill:hover, .hobby:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.contact-form { max-width:600px; margin:0 auto; }
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width:100%;
+    padding:12px 15px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:1em;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover { background-color:#3498db; }
+
+footer { text-align:center; padding:40px 20px; background-color:#eee; }
+
+footer a { color: var(--primary-color); text-decoration:none; font-weight:bold; }
+
+.resume-btn {
+    display:inline-block;
+    margin:20px 0;
+    padding:12px 25px;
+    background-color: var(--primary-color);
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition: background 0.3s ease;
+}
+
+.resume-btn:hover { background-color:#3498db; }
+
+@media(max-width:600px){
+    header h1{ font-size:2em; }
+    header p{ font-size:1em; }
+    .skills, .hobbies{ flex-direction:column; align-items:center; }
+    nav{ gap:15px; flex-wrap:wrap; justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <a href="#about" class="nav-link active">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#hobbies" class="nav-link">Hobbies</a>
+    <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+<!-- Header -->
+<header id="header">
+    <h1>Miguel Jose Diaz</h1>
+    <p>Seasoned IT professional with 15+ years of experience in systems analysis, software development, production support, and system integration within banking and insurance sectors.</p>
+    <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+</header>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am a highly experienced IT professional specializing in mainframe systems, software development, and production support. I thrive in delivering reliable and efficient solutions within the banking and insurance sectors, combining technical expertise with a collaborative approach to drive successful project outcomes.</p>
+</section>
+
+<!-- Skills -->
+<section class="skills-section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">COBOL</div>
+        <div class="skill">Mainframe Z/OS</div>
+        <div class="skill">TestComplete</div>
+        <div class="skill">SIT, CAT, Regression & Stress Testing</div>
+        <div class="skill">Agile & Waterfall</div>
+        <div class="skill">Microsoft SQL Server</div>
+        <div class="skill">Jira</div>
+        <div class="skill">ServiceNow</div>
+        <div class="skill">BMC Remedy</div>
+    </div>
+</section>
+
+<!-- Hobbies -->
+<section class="hobbies-section" id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <div class="hobbies">
+        <div class="hobby">Bicycle Riding</div>
+        <div class="hobby">Soccer</div>
+        <div class="hobby">Car Restoration</div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Connect with me: <a href="https://www.linkedin.com/in/miguel-diaz-2b88b375/" target="_blank">LinkedIn</a></p>
+    <p>&copy; 2025 Miguel Jose Diaz</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Scroll animations
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('show');
+    });
+},{threshold:0.2});
+document.querySelectorAll('header, section').forEach(el=>observer.observe(el));
+
+// Active nav highlighting
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if(pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === `#${current}`) link.classList.add('active');
+    });
+});
+</script>
+
+</body>
+</html>
